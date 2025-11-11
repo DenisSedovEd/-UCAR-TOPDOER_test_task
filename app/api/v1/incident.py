@@ -3,10 +3,9 @@ from typing import List, Optional
 from fastapi import APIRouter, Query
 from fastapi.params import Depends
 
-from app.schemas.incident import IncidentResponse, IncidentStatusSchema
-from app.models.incident import Incident
 from app.repositories import IncidentRepository, get_incident_repo
-from app.schemas.incident import IncidentCreate
+from app.schemas.incident import IncidentCreate, IncidentResponse, IncidentStatusSchema
+from app.scripts import mock_data
 
 router = APIRouter(prefix="/incidents", tags=["incident"])
 
@@ -22,7 +21,7 @@ async def get_incidents(
     return incidents
 
 
-@router.post("/incident", response_model=IncidentCreate)
+@router.post("/", response_model=IncidentCreate)
 async def create_incident(
     incident_in: IncidentCreate, repo: IncidentRepository = Depends(get_incident_repo)
 ) -> IncidentResponse:
@@ -30,7 +29,7 @@ async def create_incident(
     return IncidentResponse.model_validate(incident)
 
 
-@router.patch(("/incident/{incident_id}"), response_model=IncidentResponse)
+@router.patch(("/{incident_id}"), response_model=IncidentResponse)
 async def update_incident(
     incident_id: int,
     status_id: int,
@@ -40,7 +39,19 @@ async def update_incident(
     return IncidentResponse.model_validate(incident)
 
 
-@router.get("/statuses_incident", response_model=List[IncidentStatusSchema])
+@router.get("/statuses", response_model=List[IncidentStatusSchema])
 async def get_incidents_statuses(repo: IncidentRepository = Depends(get_incident_repo)):
     incidents_statuses = await repo.get_statuses()
     return incidents_statuses
+
+
+@router.get("/add_mock_data")
+async def add_mock_data():
+    result = mock_data.add_mock_data()
+    return result
+
+
+@router.get("/del_mock_data")
+async def delete_mock_data():
+    result = mock_data.delete_mock_data()
+    return result

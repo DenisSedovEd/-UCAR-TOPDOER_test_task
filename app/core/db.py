@@ -1,13 +1,13 @@
-from typing import AsyncGenerator
+from typing import Any, AsyncGenerator
 
 from sqlalchemy.ext.asyncio import (
-    create_async_engine,
     AsyncEngine,
-    async_sessionmaker,
     AsyncSession,
+    async_sessionmaker,
+    create_async_engine,
 )
-from app.core.config import settings
 
+from app.core.config import settings
 
 async_engine: AsyncEngine = create_async_engine(
     settings.db.url,
@@ -22,7 +22,7 @@ async_session = async_sessionmaker(
 )
 
 
-async def get_session() -> AsyncGenerator[AsyncSession]:
+async def get_session() -> AsyncGenerator[AsyncSession, Any]:
     async with async_session() as session:
         try:
             yield session

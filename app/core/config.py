@@ -30,7 +30,7 @@ class DbSettings(BaseSettings):
 
     @property
     def sync_url(self) -> str:
-        return f"postgresql+psycopg://{self.user}:{self.password}@localhost:15432/{self.db}"
+        return f"postgresql+psycopg2://{self.user}:{self.password}@{self.host}:{self.port}/{self.db}"
 
 
 class AppSettings(BaseSettings):
