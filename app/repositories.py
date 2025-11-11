@@ -1,12 +1,12 @@
-from typing import List, Sequence, AsyncGenerator, Optional
+from typing import Optional, Sequence
 
 from fastapi import Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.orm import selectinload, joinedload
+from sqlalchemy.orm import joinedload
 
 from app.core.db import get_session
-from app.models.incident import Incident, IncidentStatus, IncidentSource
+from app.models.incident import Incident, IncidentSource, IncidentStatus
 from app.schemas.incident import IncidentCreate
 
 

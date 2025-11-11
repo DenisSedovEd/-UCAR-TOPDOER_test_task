@@ -2,8 +2,6 @@ from datetime import datetime
 
 from pydantic import BaseModel, ConfigDict
 
-from app.models.incident import IncidentStatus, IncidentSource
-
 
 class IncidentStatusSchema(BaseModel):
     id: int
