@@ -1,0 +1,394 @@
+{
+  "incident_status": [
+    {
+      "id": 1,
+      "name": "new"
+    },
+    {
+      "id": 2,
+      "name": "in_progress"
+    },
+    {
+      "id": 3,
+      "name": "resolved"
+    },
+    {
+      "id": 4,
+      "name": "closed"
+    },
+    {
+      "id": 5,
+      "name": "rejected"
+    }
+  ],
+  "incident_source": [
+    {
+      "id": 1,
+      "name": "operator"
+    },
+    {
+      "id": 2,
+      "name": "monitoring"
+    },
+    {
+      "id": 3,
+      "name": "partner"
+    },
+    {
+      "id": 4,
+      "name": "customer_portal"
+    }
+  ],
+  "incidents": [
+    {
+      "id": 1,
+      "description": "Сервер 10.0.1.25 не отвечает на пинг более 5 минут",
+      "created_at": "2025-11-09T10:23:41Z",
+      "status_id": 2,
+      "source_id": 2
+    },
+    {
+      "id": 2,
+      "description": "Клиент сообщил о проблеме с доступом к личному кабинету",
+      "created_at": "2025-11-09T14:15:22Z",
+      "status_id": 1,
+      "source_id": 1
+    },
+    {
+      "id": 3,
+      "description": "Партнёр API возвращает 502 ошибку при авторизации",
+      "created_at": "2025-11-10T06:30:00Z",
+      "status_id": 3,
+      "source_id": 3
+    },
+    {
+      "id": 4,
+      "description": "Автоматическая проверка: высокий % ошибок в логе /var/log/app/error.log",
+      "created_at": "2025-11-10T05:44:12Z",
+      "status_id": 4,
+      "source_id": 2
+    },
+    {
+      "id": 5,
+      "description": "Заявка через портал: 'Не приходит SMS с кодом'",
+      "created_at": "2025-11-08T19:11:05Z",
+      "status_id": 5,
+      "source_id": 4
+    },
+    {
+      "id": 6,
+      "description": "База данных PostgreSQL не отвечает на запросы",
+      "created_at": "2025-11-10T03:12:18Z",
+      "status_id": 2,
+      "source_id": 2
+    },
+    {
+      "id": 7,
+      "description": "Пользователь не может загрузить файл > 50 МБ",
+      "created_at": "2025-11-10T11:05:33Z",
+      "status_id": 1,
+      "source_id": 1
+    },
+    {
+      "id": 8,
+      "description": "Мониторинг: CPU на сервере app-03 > 95% более 10 минут",
+      "created_at": "2025-11-10T14:22:10Z",
+      "status_id": 2,
+      "source_id": 2
+    },
+    {
+      "id": 9,
+      "description": "Партнёр сообщил о сбое в интеграции платежей",
+      "created_at": "2025-11-09T16:40:55Z",
+      "status_id": 3,
+      "source_id": 3
+    },
+    {
+      "id": 10,
+      "description": "Автоматический бэкап не запустился в 02:00",
+      "created_at": "2025-11-10T02:05:00Z",
+      "status_id": 1,
+      "source_id": 2
+    },
+    {
+      "id": 11,
+      "description": "Клиент жалуется на медленную загрузку главной страницы",
+      "created_at": "2025-11-10T09:18:44Z",
+      "status_id": 2,
+      "source_id": 4
+    },
+    {
+      "id": 12,
+      "description": "SSL-сертификат истекает через 3 дня",
+      "created_at": "2025-11-07T08:00:00Z",
+      "status_id": 1,
+      "source_id": 2
+    },
+    {
+      "id": 13,
+      "description": "Ошибка авторизации в мобильном приложении",
+      "created_at": "2025-11-10T12:30:15Z",
+      "status_id": 2,
+      "source_id": 1
+    },
+    {
+      "id": 14,
+      "description": "Партнёр не получает webhook-уведомления",
+      "created_at": "2025-11-09T17:22:33Z",
+      "status_id": 3,
+      "source_id": 3
+    },
+    {
+      "id": 15,
+      "description": "Диск на сервере db-01 заполнен на 98%",
+      "created_at": "2025-11-10T04:11:22Z",
+      "status_id": 2,
+      "source_id": 2
+    },
+    {
+      "id": 16,
+      "description": "Пользователь не видит кнопку 'Оплатить'",
+      "created_at": "2025-11-10T10:45:11Z",
+      "status_id": 1,
+      "source_id": 4
+    },
+    {
+      "id": 17,
+      "description": "Redis кластер недоступен",
+      "created_at": "2025-11-10T07:55:00Z",
+      "status_id": 2,
+      "source_id": 2
+    },
+    {
+      "id": 18,
+      "description": "API возвращает 429 Too Many Requests",
+      "created_at": "2025-11-10T13:20:05Z",
+      "status_id": 2,
+      "source_id": 3
+    },
+    {
+      "id": 19,
+      "description": "Очередь задач в Celery > 10 000",
+      "created_at": "2025-11-10T06:30:44Z",
+      "status_id": 1,
+      "source_id": 2
+    },
+    {
+      "id": 20,
+      "description": "Клиент не получил email с подтверждением",
+      "created_at": "2025-11-09T20:11:11Z",
+      "status_id": 5,
+      "source_id": 4
+    },
+    {
+      "id": 21,
+      "description": "Сайт недоступен по HTTPS",
+      "created_at": "2025-11-10T01:15:30Z",
+      "status_id": 2,
+      "source_id": 2
+    },
+    {
+      "id": 22,
+      "description": "Ошибка при экспорте отчёта в PDF",
+      "created_at": "2025-11-10T11:11:11Z",
+      "status_id": 1,
+      "source_id": 1
+    },
+    {
+      "id": 23,
+      "description": "Партнёр: дублирование заказов в системе",
+      "created_at": "2025-11-09T18:44:22Z",
+      "status_id": 3,
+      "source_id": 3
+    },
+    {
+      "id": 24,
+      "description": "Мониторинг: задержка в очереди Kafka > 5 сек",
+      "created_at": "2025-11-10T08:22:10Z",
+      "status_id": 2,
+      "source_id": 2
+    },
+    {
+      "id": 25,
+      "description": "Пользователь не может сменить пароль",
+      "created_at": "2025-11-10T15:33:21Z",
+      "status_id": 1,
+      "source_id": 4
+    },
+    {
+      "id": 26,
+      "description": "Сервер app-02 перезагрузился неожиданно",
+      "created_at": "2025-11-10T03:44:55Z",
+      "status_id": 4,
+      "source_id": 2
+    },
+    {
+      "id": 27,
+      "description": "API возвращает 500 на /health",
+      "created_at": "2025-11-10T09:00:00Z",
+      "status_id": 2,
+      "source_id": 2
+    },
+    {
+      "id": 28,
+      "description": "Клиент: не отображается история транзакций",
+      "created_at": "2025-11-10T12:12:12Z",
+      "status_id": 1,
+      "source_id": 1
+    },
+    {
+      "id": 29,
+      "description": "Партнёр: ошибка валидации JSON в запросе",
+      "created_at": "2025-11-09T19:55:33Z",
+      "status_id": 3,
+      "source_id": 3
+    },
+    {
+      "id": 30,
+      "description": "Бэкап не удалил старые файлы (>30 дней)",
+      "created_at": "2025-11-10T02:30:00Z",
+      "status_id": 1,
+      "source_id": 2
+    },
+    {
+      "id": 31,
+      "description": "Мобильное приложение крашится при открытии профиля",
+      "created_at": "2025-11-10T10:22:44Z",
+      "status_id": 2,
+      "source_id": 1
+    },
+    {
+      "id": 32,
+      "description": "Мониторинг: RAM > 90% на db-02",
+      "created_at": "2025-11-10T07:11:22Z",
+      "status_id": 2,
+      "source_id": 2
+    },
+    {
+      "id": 33,
+      "description": "Клиент не видит кнопку 'Скачать'",
+      "created_at": "2025-11-10T16:40:11Z",
+      "status_id": 1,
+      "source_id": 4
+    },
+    {
+      "id": 34,
+      "description": "Партнёр: таймаут при вызове /v2/orders",
+      "created_at": "2025-11-09T21:33:21Z",
+      "status_id": 3,
+      "source_id": 3
+    },
+    {
+      "id": 35,
+      "description": "Ошибка при отправке push-уведомления",
+      "created_at": "2025-11-10T11:55:00Z",
+      "status_id": 2,
+      "source_id": 2
+    },
+    {
+      "id": 36,
+      "description": "Пользователь не может войти через Google OAuth",
+      "created_at": "2025-11-10T13:44:33Z",
+      "status_id": 1,
+      "source_id": 1
+    },
+    {
+      "id": 37,
+      "description": "Мониторинг: сетевой трафик > 1 Gbps",
+      "created_at": "2025-11-10T05:22:10Z",
+      "status_id": 2,
+      "source_id": 2
+    },
+    {
+      "id": 38,
+      "description": "Клиент: не приходит письмо с чеком",
+      "created_at": "2025-11-09T22:11:11Z",
+      "status_id": 5,
+      "source_id": 4
+    },
+    {
+      "id": 39,
+      "description": "Партнёр: ошибка в расчёте комиссии",
+      "created_at": "2025-11-10T14:55:55Z",
+      "status_id": 3,
+      "source_id": 3
+    },
+    {
+      "id": 40,
+      "description": "Сервер app-04 недоступен по SSH",
+      "created_at": "2025-11-10T04:33:21Z",
+      "status_id": 2,
+      "source_id": 2
+    },
+    {
+      "id": 41,
+      "description": "Пользователь не видит аватарку",
+      "created_at": "2025-11-10T17:22:44Z",
+      "status_id": 1,
+      "source_id": 4
+    },
+    {
+      "id": 42,
+      "description": "Мониторинг: температура CPU > 85°C",
+      "created_at": "2025-11-10T08:44:11Z",
+      "status_id": 2,
+      "source_id": 2
+    },
+    {
+      "id": 43,
+      "description": "Клиент: не работает поиск по заказам",
+      "created_at": "2025-11-10T12:33:21Z",
+      "status_id": 1,
+      "source_id": 1
+    },
+    {
+      "id": 44,
+      "description": "Партнёр: дублирование webhook-ов",
+      "created_at": "2025-11-09T23:11:11Z",
+      "status_id": 3,
+      "source_id": 3
+    },
+    {
+      "id": 45,
+      "description": "Очередь email > 5000 сообщений",
+      "created_at": "2025-11-10T06:55:33Z",
+      "status_id": 2,
+      "source_id": 2
+    },
+    {
+      "id": 46,
+      "description": "Пользователь не может удалить аккаунт",
+      "created_at": "2025-11-10T18:22:10Z",
+      "status_id": 1,
+      "source_id": 4
+    },
+    {
+      "id": 47,
+      "description": "Мониторинг: задержка ответа API > 2 сек",
+      "created_at": "2025-11-10T09:33:21Z",
+      "status_id": 2,
+      "source_id": 2
+    },
+    {
+      "id": 48,
+      "description": "Клиент: не отображается баланс",
+      "created_at": "2025-11-10T13:11:11Z",
+      "status_id": 1,
+      "source_id": 1
+    },
+    {
+      "id": 49,
+      "description": "Партнёр: ошибка парсинга XML",
+      "created_at": "2025-11-10T15:44:44Z",
+      "status_id": 3,
+      "source_id": 3
+    },
+    {
+      "id": 50,
+      "description": "Автоматический деплой упал на этапе тестов",
+      "created_at": "2025-11-10T10:22:33Z",
+      "status_id": 4,
+      "source_id": 2
+    }
+  ]
+}
